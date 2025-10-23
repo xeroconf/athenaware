@@ -28,3 +28,5 @@ The main caveat was handling actors that already existed in the world before all
 
 ### 🖼️ Draw Service
 The Draw Service managed all draw lists and safely swapped them for rendering on the RHI thread. These draw lists allowed precise control over the rendering order of items on the screen using `DrawService::PushLayer`. For example, main UI elements could be ensured to appear on top of other content.
+
+![Screenshot of Athenaware](https://cdn.discordapp.com/attachments/1070231600979259392/1253985203253411972/SoTGame_8HMZRvCKxp.jpg?ex=68fa8b7a&is=68f939fa&hm=59235a31601c98d3fce5840d5c1288592570281627ced0ee02c5200f21287ea6)
