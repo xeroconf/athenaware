@@ -8,14 +8,14 @@ Most features from the Athenaware (Prismarine) project. Not all features were in
 > Athenaware is built using my personal cheat framework/architecture, [Scaffold](https://github.com/xeroconf/scaffold).
 
 
-## 🧠 About this Project
-### ✨ Code Style
+## About this Project
+### Code Style
 I wanted to keep the code style consistent with that of Unreal Engine 4, hence the excessive use of pascal case.
 
-### 🧩 Features
+### Features
 All the feature implementations in this repository implement an [abstract class](https://github.com/xeroconf/scaffold/blob/master/Core/Feature/Feature.h) and communicate with each other by a shared [message dispatcher](https://github.com/xeroconf/messenger) provided by the [parent manager](https://github.com/xeroconf/scaffold/blob/master/Core/Domain/Domain.h). Some features retrieve the feature instance from the parent manager directly, but this is bad practice on my part and was done to speed up release.
 
-### 🧑‍🚀 Actor Service
+### Actor Service
 The Actor Service was introduced as a solution to avoid iterating through the entire actor list every frame.
 Instead of scanning all actors, we hooked into key lifecycle events of AActor, such as `BeginPlay` and `EndPlay`.
 
@@ -26,7 +26,7 @@ This approach drastically reduced the number of actors we needed to process each
 
 The main caveat was handling actors that already existed in the world before all features could receive the event. The workaround was to iterate over the actor list once when each feature started.
 
-### 🖼️ Draw Service
+### Draw Service
 The Draw Service managed all draw lists and safely swapped them for rendering on the RHI thread. These draw lists allowed precise control over the rendering order of items on the screen using `DrawService::PushLayer`. For example, main UI elements could be ensured to appear on top of other content.
 
 ![Screenshot of Athenaware](https://cdn.discordapp.com/attachments/1070231600979259392/1253985203253411972/SoTGame_8HMZRvCKxp.jpg?ex=68fa8b7a&is=68f939fa&hm=59235a31601c98d3fce5840d5c1288592570281627ced0ee02c5200f21287ea6)
