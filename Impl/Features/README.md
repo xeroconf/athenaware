@@ -34,8 +34,8 @@ ExampleFeature::ExampleFeature() :
 
 
 ### 3. Dependency Injection
-All external dependencies (e.g. messengers, services, configuration, etc.) must be provided via dependency injection.
-Do not globally access dependencies within the feature.
+All external dependencies that are owned by the domain (e.g. messengers, services, configuration, etc.) must be provided via dependency injection.
+Do not globally access dependencies or the domain from within the feature.
 ```cpp
 ExampleFeature::ExampleFeature(aufority::Dispatcher* dispatcher, IService* service) : 
   scaffold::Feature("Example").
@@ -55,4 +55,5 @@ When disabled or destroyed, a feature must fully clean up after itself:
 - Free all dynamically allocated memory
 - Clear internal lists, containers, and caches
 - Reset variables to default states
+
 - Unregister any event or messenger subscriptions
