@@ -7,7 +7,7 @@ Overtime I'll continue to populate this repository with features.
 > This repository contains feature implementations only and cannot be compiled in its current state. It is provided solely for reference and educational purposes.
 
 > [!NOTE]
-> Athenaware is built on an old version my cheat framework, [Scaffold](https://github.com/xeroconf/scaffold).
+> Athenaware is built on an old version of my cheat framework, [Scaffold](https://github.com/xeroconf/scaffold).
 
 
 ## About this Project
