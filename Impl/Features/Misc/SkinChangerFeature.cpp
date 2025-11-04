@@ -1045,13 +1045,13 @@ bool SkinChangerV2Feature::GetSkinsDataFromEndpoint()
     // Just make sure to set a user claim, as it's required.
 	// TODO: We should probably receive a token via an event.
 	// Should not be accessing the domain directly from here.
-	auto& AufToken = MainDomain::Get().GetShulkerbox()->GetAuforityToken();
+	auto& Token = MainDomain::Get().GetShulkerbox()->GetAuforityToken();
 	//auto& SessionId = MainDomain::Get().GetShulkerbox()->GetSessionId(); Not needed anymore since moving to aufority auth
 
 	if (!Token.empty())
 	{
 		Req.Headers = { 
-			{ xorstr_("Authorization"), AufToken }
+			{ xorstr_("Authorization"), Token }
 		};
 	}
 
@@ -1077,5 +1077,6 @@ bool SkinChangerV2Feature::GetSkinsDataFromEndpoint()
 		}
 	);
 }
+
 
 //---------------------------------------------------------------------------
