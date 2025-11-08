@@ -1,13 +1,12 @@
 # ⛵ Athenaware
-Features from the Athenaware (Prismarine) project. Not all features were included as they may be trivial or contain code not suitable for public release.
-
-Over time, I’ll continue to populate this repository with additional features.
+Features from the Athenaware (Prismarine) project. Not all features are included, as some are trivial (e.g., a crosshair) or still work and are potentially game-breaking.
+Over time, I’ll continue to populate this repository with the remaining features.
 
 > [!IMPORTANT]
 > This repository contains feature implementations only and cannot be compiled in its current state. It is provided solely for reference and educational purposes.
 
 > [!NOTE]
-> Athenaware is built on an old version of my cheat framework, [Scaffold](https://github.com/xeroconf/scaffold).
+> Athenaware is built using an old version of [Scaffold](https://github.com/xeroconf/scaffold), my framework for clean, scalable and modular cheat development.
 
 ## About this Project
 ### Code Style
