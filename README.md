@@ -15,13 +15,13 @@ I chose to keep the code style consistent with Unreal Engine 4, hence the extens
 ### Features
 All the feature implementations in this repository implement the feature [abstract class](https://github.com/xeroconf/scaffold/blob/master/Core/Feature/Feature.h) and communicate with each other using a [message dispatcher](https://github.com/xeroconf/messenger). Some features retrieve the feature instance from the owning [feature manager](https://github.com/xeroconf/scaffold/blob/master/Core/Feature/FeatureManager.h) directly, but this is bad practice on my part and was done to speed up release.
 
-`Feature::OnStart` is called once when the feature is initialized or enabled.
-`Feature::OnEnd` is called once when the feature is disabled.
-`Feature::Tick` is called every engine tick and drives the feature's update cycle.
-`Feature::CanExecute` is evaluated every tick and determines whether the feature should run.
-`Feature::OnConditionChange` is called only when the result of CanExecute changes from the previous tick.
-`Feature::OnExecute` is called every tick while CanExecute returns true.
-`Feature::OnDiscard` is called every tick while CanExecute returns false.
+- `Feature::OnStart` is called once when the feature is initialized or enabled.
+- `Feature::OnEnd` is called once when the feature is disabled.
+- `Feature::Tick` is called every engine tick and drives the feature's update cycle.
+- `Feature::CanExecute` is evaluated every tick and determines whether the feature should run.
+- `Feature::OnConditionChange` is called only when the result of CanExecute changes from the previous tick.
+- `Feature::OnExecute` is called every tick while CanExecute returns true.
+- `Feature::OnDiscard` is called every tick while CanExecute returns false.
 
 ### Actor Service
 The Actor Service was introduced as a solution to avoid iterating through the entire actor list every frame.
